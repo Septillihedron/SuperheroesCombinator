@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperheroesCombinator</title>
+    <style>
+		body {
+			background-color: #338;
+		}
+        main div {
+            display: flex;
+			margin-top: 1rem;
+        }
+		main div p {
+			margin: 0;
+			margin-right: 0.5rem;
+		}
+		main div button,main div input {
+			background-color: #333;
+			border-radius: 0.2vw;
+            border: solid #333;
+		}
+		* {
+			color: #fff;
+		}
+    </style>
+</head>
+<body>
+    <main>
+        <div>
+            <p>Heroes: </p>
+			<input type="file" id="files" accept=".yml,.yaml" multiple="true">
+        </div>
+        <div>
+            <p>Max files to combine into one: </p>
+            <input type="number" pattern="[0-9]+" id="combinations">
+        </div>
+        <div>
+            <p>Download zip: </p>
+            <button id="download" onclick="download()">Download</button>
+        </div>
+    </main>
+    <script src="jszip.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
